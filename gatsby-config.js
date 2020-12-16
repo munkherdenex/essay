@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Монгол эсээнүүд`,
+    title: `Essay.Gereesee | эсээ.гэрээсээ`,
     author: `Мөнх-Эрдэнэ`,
     description: `Монгол хэлээр бичигдсэн төрөл бүрийн эсээнүүд`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,

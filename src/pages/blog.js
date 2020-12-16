@@ -10,14 +10,14 @@ import SearchPosts from "../components/searchPosts"
 class Blog extends React.Component {
   render() {
     const { data, navigate, location } = this.props
-    const siteTitle = data.site.siteMetadata.title
+    const siteTitle = "эсээ.гэрээсээ"
     const posts = data.allMdx.edges
     const localSearchBlog = data.localSearchBlog
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+        {/* <Bio /> */}
         <SearchPosts
           posts={posts}
           localSearchBlog={localSearchBlog}
@@ -25,7 +25,7 @@ class Blog extends React.Component {
           location={location}
         />
         <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
+          <Button marginTop="85px">Нүүр</Button>
         </Link>
       </Layout>
     )

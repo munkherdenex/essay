@@ -72,7 +72,7 @@ const SearchedPosts = ({ results }) =>
     })
   ) : (
     <p style={{ textAlign: "center" }}>
-      Sorry, couldn't find any posts matching this search.
+      Уучлаарай, тохирох эсээ олдсонгүй.
     </p>
   )
 
@@ -126,7 +126,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
         <input
           id="search"
           type="search"
-          placeholder="Search all posts"
+          placeholder="Бүх эсээнээс хайх"
           value={query}
           onChange={e => {
             navigate(
