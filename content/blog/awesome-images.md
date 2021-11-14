@@ -1,6 +1,6 @@
 ---
 path: amidral-baigal-essay
-date: 2020-12-12T01:22:55.506Z
+date: 2021-11-02T01:22:55.506Z
 title: Амьдрал
 description: 400+ эсээ
 ---
