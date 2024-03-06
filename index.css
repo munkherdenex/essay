@@ -7,13 +7,18 @@ body {
 header {
     padding: 20px 40px;
 }
+section {
+    padding-left: 200px;
+
+}
 h1 {
     text-align: center;
 }
 h2 {
-    padding: 20px;
+    padding: 10px;
     text-align: left;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
 }
 footer {
     text-align: center;
@@ -24,10 +29,17 @@ footer {
 
 article {
     padding: 20px;
+    padding-left: 50px;
     text-align: left;
     margin-bottom: 20px;
+    font-size: 20px;
 }
-
+article a:hover {
+    background-color: darkgray;
+}
+article p {
+    font-size: 14px;
+}
 article h2 {
     color: #333333;
 }
