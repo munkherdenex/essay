@@ -5,16 +5,16 @@ body {
     background-color: #f4f4f4;
 }
 header {
-    padding: 20px 40px;
+    padding: 40px;
+    text-align: center;
 }
 section {
     padding-left: 200px;
     padding-right: 200px;
 
 }
-h1 {
-    padding: 30px;
-    text-align: center;
+h1, h3 {
+    padding-left: 30px;
 }
 h2 {
     padding: 10px;
