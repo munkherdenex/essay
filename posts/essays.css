@@ -9,19 +9,21 @@ header {
     text-align: center;
 }
 section {
-    padding-left: 200px;
-    padding-right: 200px;
-
+    margin-left: 200px;
+    margin-right: 200px;
 }
-h1, h3 {
+
+@media (max-width: 767px) {
+    section {
+        margin-left: 0; 
+        margin-right: 0; 
+    }
+}
+
+h3, h2 {
     padding-left: 30px;
 }
-h2 {
-    padding: 10px;
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-}
+
 footer {
     text-align: center;
     padding: 10px;
