@@ -7,10 +7,15 @@ body {
 header {
     padding: 20px 40px;
 }
-section {
+.boody {
     padding-left: 200px;
-
 }
+@media (max-width: 550px) {
+    .boody {
+        padding-left: 30px; /* Adjust margins for smaller screens */
+    }
+}
+
 h1 {
     text-align: center;
 }
@@ -50,8 +55,7 @@ article h2 {
 button {
     font-size: 15px;
     text-align: center;
-    margin: 50px;
-    margin-left: 200px;
+    margin-top: 50px;
     padding: 10px 25px;
     box-sizing: border-box;
     background-color: black;
