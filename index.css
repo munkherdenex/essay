@@ -43,9 +43,11 @@ article {
     margin-bottom: 20px;
     font-size: 20px;
 }
-article a:hover {
-    background-color: darkgray;
+article a {
+    font-family: 'Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;
+    font-weight: bold;
 }
+
 article p {
     font-size: 14px;
 }
