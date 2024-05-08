@@ -28,16 +28,19 @@ document.getElementById('searchInput').addEventListener('input', function() {
     function showEssays() {
       const startIndex = currentPage * essaysPerPage;
       const endIndex = startIndex + essaysPerPage;
-      const currentEssays = articles.slice(startIndex, endIndex);
-  
-      essaysContainer.innerHTML = "";
-      currentEssays.forEach(article => {
-        essaysContainer.appendChild(article);
+    
+      articles.forEach((article, index) => {
+        if (index >= startIndex && index < endIndex) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
       });
-  
+    
       nextButton.disabled = endIndex >= articles.length;
       backButton.disabled = currentPage === 0;
     }
+    
   
     nextButton.addEventListener("click", function() {
       currentPage++;
