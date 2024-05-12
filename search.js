@@ -17,42 +17,44 @@ document.getElementById('searchInput').addEventListener('input', function() {
   });
 
     // Daraagiin & Butsah button
-  document.addEventListener("DOMContentLoaded", function() {
-    const essaysContainer = document.getElementById("essays");
-    const nextButton = document.getElementById("nextButton");
-    const backButton = document.getElementById("backButton");
-    const articles = Array.from(essaysContainer.querySelectorAll("article"));
-    const essaysPerPage = 5;
-    let currentPage = 0;
+    document.addEventListener("DOMContentLoaded", function() {
+      const essaysContainer = document.getElementById("essays");
+      const nextButton = document.getElementById("nextButton");
+      const backButton = document.getElementById("backButton");
+      const pageNumberSpan = document.getElementById("pageNumber");
+      const articles = Array.from(essaysContainer.querySelectorAll("article"));
+      const essaysPerPage = 5;
+      let currentPage = 0;
   
-    function showEssays() {
-      const startIndex = currentPage * essaysPerPage;
-      const endIndex = startIndex + essaysPerPage;
-    
-      articles.forEach((article, index) => {
-        if (index >= startIndex && index < endIndex) {
-          article.style.display = 'block';
-        } else {
-          article.style.display = 'none';
-        }
+      function showEssays() {
+          const startIndex = currentPage * essaysPerPage;
+          const endIndex = startIndex + essaysPerPage;
+  
+          articles.forEach((article, index) => {
+              if (index >= startIndex && index < endIndex) {
+                  article.style.display = 'block';
+              } else {
+                  article.style.display = 'none';
+              }
+          });
+  
+          nextButton.disabled = endIndex >= articles.length;
+          backButton.disabled = currentPage === 0;
+  
+          // Update the page number
+          pageNumberSpan.textContent = currentPage + 1;
+      }
+  
+      nextButton.addEventListener("click", function() {
+          currentPage++;
+          showEssays();
       });
-    
-      nextButton.disabled = endIndex >= articles.length;
-      backButton.disabled = currentPage === 0;
-    }
-    
   
-    nextButton.addEventListener("click", function() {
-      currentPage++;
+      backButton.addEventListener("click", function() {
+          currentPage--;
+          showEssays();
+      });
+  
       showEssays();
-    });
-  
-    backButton.addEventListener("click", function() {
-      currentPage--;
-      showEssays();
-    });
-  
-    showEssays();
   });
-  
   
